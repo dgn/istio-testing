@@ -1,2 +1,5 @@
 external_service/whatsmyip
 external_service/envoy_config*.json
+
+custom_root_cert_for_jwks/cert.crt
+custom_root_cert_for_jwks/key.key
