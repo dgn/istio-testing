@@ -1,2 +1,2 @@
-whatsmyip
-envoy_config*.json
+external_service/whatsmyip
+external_service/envoy_config*.json
