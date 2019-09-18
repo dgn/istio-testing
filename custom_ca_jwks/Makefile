@@ -22,7 +22,7 @@ create-nginx: create-secret
 	@${KUBECTL_WITH_CFG} rollout status --timeout=2m deployment/nginx-deployment -n ${NS2}
 
 create: 
-	@${KUBECTL_WITH_CFG} label ns default istio-injection=enabled || echo .
+	@${KUBECTL_WITH_CFG} label ns ${NS} istio-injection=enabled || echo .
 	@${KUBECTL_WITH_CFG} apply -f httpbin.yaml -n ${NS}
 	@${KUBECTL_WITH_CFG} apply -f sleep.yaml -n ${NS}
 	@${KUBECTL_WITH_CFG} rollout status --timeout=2m deployment/httpbin -n ${NS}
